@@ -6,6 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Items</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: url('{{url_for("static", filename="background2.jpg")}}');
+            color: white;
+            background-position: center;
+            background-size: cover;
+        }
+        table {
+            background: rgba(0, 0, 0, 0.5);
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
 <table>
@@ -23,11 +47,11 @@
   </tr>
   <tr>
     <td>Quantity</td>
-    <td>{{quantity}}</td>
+    <td>{{item_qty}}</td>
   </tr>
   <tr>
     <td>Price</td>
-    <td>{{price}}</td>
+    <td>{{item_price}}</td>
   </tr>
 </table>
 </body>
